@@ -1,5 +1,7 @@
 # define minimum cmake version to use
 cmake_minimum_required(VERSION 3.22)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 # define project
 project(HELLOAPP)
 set(SRC_FILES src/main.cpp src/calc.cpp)
