@@ -5,6 +5,9 @@
 
 int main(void)
 {
+#ifdef DEBUGINFO
+    std::cout << DEBUGINFO << std::endl;
+#endif
     std::cout << "Software Version is " << HELLOAPP_VERSION_MAJOR << '.' << HELLOAPP_VERSION_MINOR << std::endl;
     InitWifi();
     std::cout << "Product Type is " << ProductType << std::endl;
