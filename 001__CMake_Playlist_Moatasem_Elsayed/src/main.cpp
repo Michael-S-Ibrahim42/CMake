@@ -12,5 +12,7 @@ int main(void)
     InitWifi();
     std::cout << "Product Type is " << ProductType << std::endl;
     std::cout << "Product Year is " << PRODUCT_YEAR << std::endl;
+    std::cout << "Target Compiler Definition: " << STD_CXX << std::endl;
+
     return(0); 
 }/* main */
