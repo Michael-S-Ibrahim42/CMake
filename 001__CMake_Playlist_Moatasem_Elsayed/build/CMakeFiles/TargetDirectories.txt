@@ -1,3 +1,0 @@
-/mnt/Educational_Material/00_SHIELD/02_Codes/16_CMake/Codes/002__Lab6/build/CMakeFiles/hellobinary.dir
-/mnt/Educational_Material/00_SHIELD/02_Codes/16_CMake/Codes/002__Lab6/build/CMakeFiles/edit_cache.dir
-/mnt/Educational_Material/00_SHIELD/02_Codes/16_CMake/Codes/002__Lab6/build/CMakeFiles/rebuild_cache.dir

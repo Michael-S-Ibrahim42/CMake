@@ -1,8 +1,18 @@
 #include <iostream>
 #include "calc.hpp"
+#include "wifi.hpp"
+#include "defaultconfig.h"
 
 int main(void)
 {
-    std::cout << sum(1,2) << std::endl;
-    return(0);
+#ifdef DEBUG
+    std::cout << DEBUGINFO << std::endl;
+#endif
+    std::cout << "Software Version is " << HELLOAPP_VERSION_MAJOR << '.' << HELLOAPP_VERSION_MINOR << std::endl;
+    InitWifi();
+    std::cout << "Product Type is " << ProductType << std::endl;
+    std::cout << "Product Year is " << PRODUCT_YEAR << std::endl;
+    std::cout << "Target Compiler Definition: " << STD_CXX << std::endl;
+
+    return(0); 
 }/* main */
