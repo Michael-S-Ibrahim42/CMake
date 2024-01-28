@@ -51,3 +51,64 @@ configure_file(defaultconfig.h.in defaultconfig.h)
 target_compile_definitions(hellobinary PUBLIC "STD_CXX=17")
 target_compile_options(hellobinary PUBLIC -march=native)
 install(FILES "${PROJECT_BINARY_DIR}/_build/hellobinary" DESTINATION "${PROJECT_BINARY_DIR}/_build/executable")
+# ################################################ Session 10
+################### Files Operations
+# FILE(READ "./src/main.cpp" MAIN_TEXT)
+# message("${MAIN_TEXT}")
+# FILE(STRINGS "./src/main.cpp" MAIN_TEXT_STRINGS)
+# message("${MAIN_TEXT_STRINGS}")
+# FILE(STRINGS "./src/main.cpp" ParsedText REGEX "^int.")
+# message("${ParsedText}")
+# FILE(GLOB_RECURSE SRCS "*.cpp")
+# message("${SRCS}")
+########## Strings
+# FILE(READ "src/main.cpp" MAIN_TEXT)
+# STRING(REGEX REPLACE "int" "void" OUT ${MAIN_TEXT})
+# message("${OUT}")
+############## macro VS function
+# set(globalvariable 10)
+# #macro like function
+# macro(funname x)
+#     message("${x}")
+#     message("${${x}}")
+#     set(globalvariable 15)
+# endmacro()
+# message("${globalvariable}")
+# funname(globalvariable)
+# message("${globalvariable}")
+
+# set(globalvariable 10)
+# # #############function
+# function(funname x)
+#     message("${x}")
+#     message("${${x}}")
+#     set(globalvariable 15) # the function affects a local variable of the function not the global variable
+# endfunction()
+# message("${globalvariable}")
+# funname(globalvariable)
+# message("${globalvariable}")
+# set(globalvariable 10)
+# # #######function
+# function(funname x)
+#     message("${x}")
+#     message("${${x}}")
+#     set(globalvariable 15 PARENT_SCOPE) # the function affects a the global variable
+# endfunction()
+# message("${globalvariable}")
+# funname(globalvariable)
+# message("${globalvariable}")
+# #########################break in loops
+# while(TRUE)
+#  message("Hello")
+#  break()
+# endwhile()
+############# continue
+# while(TRUE)
+#  message("Hello Before Continue")
+#  continue()
+#  message("Hello After Continue")
+# endwhile()
+############### command line commands
+# execute_process(COMMAND "ls")
+# ################################################ Session 10
+
