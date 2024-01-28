@@ -111,4 +111,8 @@ install(FILES "${PROJECT_BINARY_DIR}/_build/hellobinary" DESTINATION "${PROJECT_
 ############### command line commands
 # execute_process(COMMAND "ls")
 # ################################################ Session 10
-
+# ################################################ Session 11
+set(CMAKE_PREFIX_PATH "/mnt/MSI/00_SHIELD/002__Tools/vcpkg/installed/x64-linux/share")
+find_package(fmt CONFIG REQUIRED)
+target_link_libraries(hellobinary PRIVATE fmt::fmt)
+# ################################################ Session 11
