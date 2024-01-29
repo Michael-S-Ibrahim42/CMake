@@ -2,9 +2,11 @@
 #include "calc.hpp"
 #include "wifi.hpp"
 #include "defaultconfig.h"
+#include "fmt/format.h"
 
 int main(void)
 {
+    fmt::print("Don't {}\n", "panic");
 #ifdef DEBUG
     std::cout << DEBUGINFO << std::endl;
 #endif
